@@ -29,8 +29,11 @@ class Student extends Person {
         this.favSubjects = studentProps.favSubjects;
     };
 
-listsSubjects() {for (i = 0; i < favSubjects.length; i++);
-    return this.favSubjects[i]};
+    listsSubjects() {
+        for (let i = 0; i < this.favSubjects.length; i++) {
+          console.log(`${this.name} <3's ${this.favSubjects[i]}`);
+        }
+      }
 PRAssignment(subject) {return `${this.name} has submitted a PR for ` + subject};
 sprintChallenge(subject) {return `${this.name} has begun the sprint challenge on ` + subject};
 
@@ -87,7 +90,7 @@ const Dom = new Student ({
     favSubjects: ["JS", "D3", "MongoDB"],
     })
 
-    console.log(Dom.listsSubjects);
+    Dom.listsSubjects();
     console.log(Dom.sprintChallenge("Responsive Web Design"));
 
     const Yassir = new Student ({
